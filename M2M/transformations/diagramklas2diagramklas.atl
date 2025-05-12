@@ -1,0 +1,82 @@
+-- @path UML=/http://www.eclipse.org/uml2/5.0.0/UML
+module ClassDiagramRefactoring;
+create OUT : UML refining IN : UML;
+
+-- Helper do generowania unikalnych ID
+helper context UML!Element def: generateId() : String = 
+    '_' + self.name.toLower() + self.toString().md5().substring(1, 8);
+
+-- Reguła dla atrybutów - ustawienie prywatnej widoczności jeśli nie ustawiona
+rule SetPrivateVisibilityForAttributes {
+    from
+        attr : UML!Property (
+            attr.owner.oclIsKindOf(UML!Class) and 
+            (attr.visibility = null or attr.visibility <> #private)
+        )
+    to
+        attr (
+            visibility <- #private
+        )
+}
+
+-- Reguła zmieniająca asocjację na kompozycję między KlasaA i KlasaB
+rule ChangeAssociationToComposition {
+    from
+        assoc : UML!Association (assoc.name = '_F1p9sBH5Ee-KOb_oedtJKA')
+    to
+        compEnd : UML!Property (
+            name <- 'klasab',
+            aggregation <- #composite,
+            type <- assoc.memberEnd->select(p | p.type.name = 'KlasaB')->first().type,
+            lowerValue <- assoc.memberEnd->select(p | p.type.name = 'KlasaB')->first().lowerValue,
+            upperValue <- assoc.memberEnd->select(p | p.type.name = 'KlasaB')->first().upperValue
+        ),
+        assoc (
+            memberEnd <- compEnd,
+            ownedEnd <- compEnd,
+            navigableOwnedEnd <- compEnd
+        )
+}
+
+-- Reguła dodająca operacje get dla prywatnych atrybutów
+rule AddGetOperations {
+    from
+        attr : UML!Property (
+            attr.visibility = #private and 
+            attr.owner.oclIsKindOf(UML!Class)
+    to
+        getOp : UML!Operation (
+            name <- 'get' + attr.name.toUpperFirst(),
+            visibility <- #public,
+            ownedParameter <- Sequence {}
+        ),
+        returnParam : UML!Parameter (
+            direction <- #return,
+            type <- attr.type
+        )
+    do {
+        getOp.ownedParameter <- returnParam;
+        attr.owner.oclAsType(UML!Class).ownedOperation <- getOp;
+    }
+}
+
+-- Reguła dodająca operacje set dla prywatnych atrybutów
+rule AddSetOperations {
+    from
+        attr : UML!Property (
+            attr.visibility = #private and 
+            attr.owner.oclIsTypeOf(UML!Class))
+    to
+        setOp : UML!Operation (
+            name <- 'set' + attr.name.toUpperFirst(),
+            visibility <- #public
+        ),
+        param : UML!Parameter (
+            name <- 'p',
+            type <- attr.type
+        )
+    do {
+        setOp.ownedParameter <- param;
+        attr.owner.oclAsType(UML!Class).ownedOperation <- setOp;
+    }
+}
