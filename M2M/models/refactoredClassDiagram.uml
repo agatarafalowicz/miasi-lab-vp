@@ -1,37 +1,69 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_qqELkBH3Ee-KOb_oedtJKA" name="diagramklasdolab11">
-  <packageImport xmi:id="_qrZoUBH3Ee-KOb_oedtJKA">
-    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
-  </packageImport>
-  <packagedElement xmi:type="uml:Class" xmi:id="_sbcCkBH3Ee-KOb_oedtJKA" name="KlasaA">
-    <ownedAttribute xmi:id="_0QXXcBH3Ee-KOb_oedtJKA" name="atrybut1" visibility="private">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-    </ownedAttribute>
-    <ownedAttribute xmi:id="_KHA6oBH4Ee-KOb_oedtJKA" name="atrybut2">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-    </ownedAttribute>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_to0bsBH3Ee-KOb_oedtJKA" name="KlasaB">
-    <ownedAttribute xmi:id="_XAnqUBH4Ee-KOb_oedtJKA" name="atrybut1">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-    </ownedAttribute>
-    <ownedOperation xmi:id="_deK8kBH4Ee-KOb_oedtJKA" name="IntToBool" concurrency="concurrent">
-      <ownedParameter xmi:id="_mxm20BH4Ee-KOb_oedtJKA" name="p">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_qqELkBH3Ee-KOb_oedtJKA" name="diagramklasdolab11">
+    <packageImport xmi:id="_qrZoUBH3Ee-KOb_oedtJKA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_sbcCkBH3Ee-KOb_oedtJKA" name="KlasaA">
+      <ownedAttribute xmi:id="_0QXXcBH3Ee-KOb_oedtJKA" name="atrybut1" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-      <ownedParameter xmi:id="_wnc6kBH4Ee-KOb_oedtJKA" direction="return">
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_KHA6oBH4Ee-KOb_oedtJKA" name="atrybut2" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-      </ownedParameter>
-    </ownedOperation>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_F1p9sBH5Ee-KOb_oedtJKA" memberEnd="_F1uPIBH5Ee-KOb_oedtJKA _F1vdQBH5Ee-KOb_oedtJKA" navigableOwnedEnd="_F1uPIBH5Ee-KOb_oedtJKA _F1vdQBH5Ee-KOb_oedtJKA">
-    <eAnnotations xmi:id="_F1tBABH5Ee-KOb_oedtJKA" source="org.eclipse.papyrus">
-      <details xmi:id="_F1toEBH5Ee-KOb_oedtJKA" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:id="_F1uPIBH5Ee-KOb_oedtJKA" name="klasab" type="_to0bsBH3Ee-KOb_oedtJKA" association="_F1p9sBH5Ee-KOb_oedtJKA">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MEnaUBH5Ee-KOb_oedtJKA"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MEuvEBH5Ee-KOb_oedtJKA" value="*"/>
-    </ownedEnd>
-    <ownedEnd xmi:id="_F1vdQBH5Ee-KOb_oedtJKA" name="klasaa" type="_sbcCkBH3Ee-KOb_oedtJKA" association="_F1p9sBH5Ee-KOb_oedtJKA"/>
-  </packagedElement>
-</uml:Model>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_to0bsBH3Ee-KOb_oedtJKA" name="KlasaB">
+      <ownedAttribute xmi:id="_XAnqUBH4Ee-KOb_oedtJKA" name="atrybut1" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_deK8kBH4Ee-KOb_oedtJKA" name="IntToBool" concurrency="concurrent">
+        <ownedParameter xmi:id="_mxm20BH4Ee-KOb_oedtJKA" name="p">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_wnc6kBH4Ee-KOb_oedtJKA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_F1p9sBH5Ee-KOb_oedtJKA" memberEnd="_F1uPIBH5Ee-KOb_oedtJKA _F1vdQBH5Ee-KOb_oedtJKA" navigableOwnedEnd="_F1uPIBH5Ee-KOb_oedtJKA _F1vdQBH5Ee-KOb_oedtJKA">
+      <eAnnotations xmi:id="_F1tBABH5Ee-KOb_oedtJKA" source="org.eclipse.papyrus">
+        <details xmi:id="_F1toEBH5Ee-KOb_oedtJKA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_F1uPIBH5Ee-KOb_oedtJKA" name="klasab" type="_to0bsBH3Ee-KOb_oedtJKA" aggregation="composite" association="_F1p9sBH5Ee-KOb_oedtJKA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MEnaUBH5Ee-KOb_oedtJKA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MEuvEBH5Ee-KOb_oedtJKA" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_F1vdQBH5Ee-KOb_oedtJKA" name="klasaa" type="_sbcCkBH3Ee-KOb_oedtJKA" association="_F1p9sBH5Ee-KOb_oedtJKA"/>
+    </packagedElement>
+  </uml:Model>
+  <uml:Operation xmi:id="_iOX2kDApEfCk8qq8EreQQQ" name="getatrybut1" visibility="public">
+    <ownedParameter xmi:id="_iOX2kTApEfCk8qq8EreQQQ" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedParameter>
+  </uml:Operation>
+  <uml:Operation xmi:id="_iOX2kjApEfCk8qq8EreQQQ" name="setatrybut1" visibility="public">
+    <ownedParameter xmi:id="_iOX2kzApEfCk8qq8EreQQQ" name="p">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedParameter>
+  </uml:Operation>
+  <uml:Operation xmi:id="_iOX2lDApEfCk8qq8EreQQQ" name="getatrybut2" visibility="public">
+    <ownedParameter xmi:id="_iOX2lTApEfCk8qq8EreQQQ" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedParameter>
+  </uml:Operation>
+  <uml:Operation xmi:id="_iOX2ljApEfCk8qq8EreQQQ" name="setatrybut2" visibility="public">
+    <ownedParameter xmi:id="_iOX2lzApEfCk8qq8EreQQQ" name="p">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedParameter>
+  </uml:Operation>
+  <uml:Operation xmi:id="_iOX2mDApEfCk8qq8EreQQQ" name="getatrybut1" visibility="public">
+    <ownedParameter xmi:id="_iOX2mTApEfCk8qq8EreQQQ" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedParameter>
+  </uml:Operation>
+  <uml:Operation xmi:id="_iOX2mjApEfCk8qq8EreQQQ" name="setatrybut1" visibility="public">
+    <ownedParameter xmi:id="_iOX2mzApEfCk8qq8EreQQQ" name="p">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedParameter>
+  </uml:Operation>
+</xmi:XMI>
